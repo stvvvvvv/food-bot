@@ -9,5 +9,6 @@ export abstract class Command {
 		this.description = description;
 	}
 
+	abstract handle(msg: Message, bot: TelegramBot): boolean;
 	abstract execute(msg: Message, bot: TelegramBot): void;
 }
